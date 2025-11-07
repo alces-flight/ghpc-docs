@@ -43,5 +43,5 @@ Ensure your platform is ready for appliance deployment:
         
         virt-install --name=${VM_HOSTNAME} --boot uefi --ram=4096 --vcpus=2 --import --disk path=${VM_IMAGE},format=${VM_IMAGE_FORMAT} --os-variant=rhel9.4 --network bridge=${NET_ETH0},model=virtio --graphics vnc,listen=0.0.0.0 --noautoconsole
         ```
-4. Log into director as root & **change password** (default password: `p4ssw0rd1;`)
+4. Log into director as root (default password: `p4ssw0rd1;`)
     1. Can locate DHCP IP on `ext` network of VM with `virsh net-dhcp-leases ext` (might need to cross reference with MAC address of VM interface shown in `virsh domiflist $VM_HOSTNAME`)
