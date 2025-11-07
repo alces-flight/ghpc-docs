@@ -3,7 +3,7 @@
 require 'tty-prompt'
 
 DOCS_DIR = "/opt/ghpc-docs"
-READER_CMD = "glow -p --style dracula -w #{`tput cols`.to_i}"
+READER_CMD = "glow -p --style #{DOCS_DIR}/style.json -w #{`tput cols`.to_i}"
 
 @prompt = TTY::Prompt.new(active_color: :blue, interrupt: :exit, quiet: true)
 @prompt.on(:keyescape) {|key| exit}.on(:keypress) {|key| if key.value == "q" then exit end}
