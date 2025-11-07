@@ -18,7 +18,7 @@ A site admin user is a privileged user who can utilise sudo to manage and modify
 
 - Login to domain
 - Create user
-```
+```bash
 ipa user-add USERNAME --first USER --last NAME --random
 ipa group-add-member SiteAdmins --users siteadmin
 ipa user-mod siteadmin --random 

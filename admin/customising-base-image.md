@@ -3,7 +3,7 @@
 The base image for each image type is under `/export/image/`. Changes are made by entering the image environment
 
 To enter an interactive environment within the image to make changes:
-```
+```bash
 cd /export/image/
 bash chroot.sh IMAGE_TYPE
 ```
