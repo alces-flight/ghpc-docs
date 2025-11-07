@@ -6,7 +6,7 @@ Documentation & helper for the GHPC project.
 
 - Clone this repo to `/opt/docs` (and checkout specific release tag if necessary)
     ```bash
-    git clone --branch 'v1.2' https://github.com/concertim/ghpc-docs  /opt/ghpc-docs/
+    git clone --branch 'v1.2' https://github.com/alces-flight/ghpc-docs  /opt/ghpc-docs/
     ```
 - Create link to run `ghpc-docs`
     ```bash
