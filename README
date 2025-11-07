@@ -1,0 +1,41 @@
+# GHPC Documentation
+
+Documentation & helper for the GHPC project.
+
+## Installation
+
+- Clone this repo to `/opt/docs` (and checkout specific release tag if necessary)
+    ```bash
+    git clone --branch 'v1.2' https://github.com/concertim/ghpc-docs  /opt/ghpc-docs/
+    ```
+- Create link to run `ghpc-docs`
+    ```bash
+    ln -s /opt/ghpc-docs/ghpc-docs /usr/bin/
+    ```
+- Install gem dependency
+    ```bash
+    gem install 'tty-prompt'
+    ```
+- Install package dependency
+    ```bash
+    dnf install https://github.com/charmbracelet/glow/releases/download/v2.1.1/glow-2.1.1-1.x86_64.rpm
+    ```
+- Add prompt message about reading docs
+    ```bash
+    cat << 'EOF' > /etc/motd.d/ghpc-docs.sh
+
+    To get started with GHPC view the documentation by running:
+        ghpc-docs
+
+    EOF
+    ```
+
+## Reader Script
+
+There is a ruby script called `ghpc-docs` that will list and read docs from `/opt/docs/` on the system.
+
+## Docs Formatting
+
+- Only files ending `.md` will be considered docs by the reader
+- If a doc starts with a markdown H1 element then this title will be used as the display title in the docs list, otherwise a title will be fudged from the file name
+- If a document is in a sub directory then that will be assumed to be the "Category" of the doc and will be displayed in square brackets before the doc in the list

@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+require 'tty-prompt'
+
+DOCS_DIR = "/opt/docs"
+READER_CMD = "glow -p --style dracula -w #{`tput cols`.to_i}"
+
+@prompt = TTY::Prompt.new(active_color: :blue, interrupt: :exit, quiet: true)
+@prompt.on(:keyescape) {|key| exit}.on(:keypress) {|key| if key.value == "q" then exit end}
+
+# Find all docs
+files = Dir["#{DOCS_DIR}/**/*.md"]
+
+# Create pretty names for all docs
+docs = {}
+files.each do |f|
+  without_docs_dir = f.gsub("#{DOCS_DIR}/", '')
+
+  # If there's a heading at start of file, use that for name
+  # otherwise create pretty name from filename
+  firstline = File.open(f, &:gets)
+  if firstline.start_with?('# ') then
+    list_name = firstline.gsub("# ","").strip()
+  else
+    filename = File.basename(f).gsub(".md","")
+    list_name = filename.split(/ |\_|\-/).map(&:capitalize).join(" ")
+  end
+
+  # If in sub dir then consider this as category
+  has_category = if File.dirname(without_docs_dir) == '.' then false else true end
+  if has_category
+    category = File.dirname(without_docs_dir).split(/ |\_|\-/).map(&:capitalize).join(" ")
+    list_name = "[#{category}] #{list_name}"
+  end
+
+  docs[f] = list_name
+end
+
+doc = nil
+while doc.nil?
+  doc = @prompt.select("Which doc would you like to read? (total docs: #{docs.count})", per_page: docs.count) do |menu|
+    menu.enum "."
+    docs.each.map {|file,title| menu.choice "#{title}", file}
+  end
+  system("#{READER_CMD} #{doc}")
+  doc = nil
+end
