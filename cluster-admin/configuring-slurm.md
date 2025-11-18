@@ -1,6 +1,6 @@
 # Configuring SLURM
 
-The standard cluster images come with SLURM installed and configure for 2 compute nodes named `node01` and `node02`.
+The standard cluster images come with SLURM installed and configured for 2 compute nodes named `node01` and `node02`.
 
 For ease of management, the SLURM configuration files are located in a shared persistent location per cluster on the director that is then mounted onto all the systems within that cluster. This is accessible via `/export/sharedpersistent/CLUSTERNAME/etc/slurm/`. 
 
