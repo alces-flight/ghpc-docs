@@ -12,6 +12,8 @@ A regular user is a non-root user who can access a cluster as themselves and run
 
 The user can now access any nodes that are `login` or `compute` types of all clusters. The first time they login successfully they will be prompted to set a new password.
 
+**Note: New users will need to login at least once via CLI in order to set their password before they can use the web interface**
+
 ## Site Admin
 
 A site admin user is a privileged user who can utilise sudo to manage and modify a cluster.
