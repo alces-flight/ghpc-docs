@@ -13,7 +13,6 @@ Hunter running on port 8888 - Ctrl+C to stop
 $ flight hunter hunt
 Hunter running on port 8888 - Ctrl+C to stop
 
-
 Found node.
 ID: b20a5b1f
 Name: hunterclient
@@ -25,4 +24,4 @@ Node added to buffer node list
     ```bash
     flight hunter show --buffer b20a5b1f
     ```
-    - The `label` preset (at the top of this output) is the MAC address of the interface it PXE booted on. This will be useful later on when assigning a personality to the node for PXE booting
+    - The `label` preset (at the top of this output) is the interface name & MAC address of the interface it PXE booted on. This will be useful later on when assigning a personality to the node for PXE booting
