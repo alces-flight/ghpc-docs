@@ -78,3 +78,8 @@ The Controller node requires an IP on the Domain Network. This can be anything i
     ```
 5. Launch login node (with primary network interface (the one to PXE from) plugged into the GHPC cluster network and secondary network interface plugged into the External network)
 6. Launch compute nodes
+7. Configure SLURM to:
+    1. Ensure that node names and resource information are correct
+    1. Create whatever partitions you'd like
+    1. Perform any other configuration changes to meet your needs
+    1. **Read the Configuring SLURM doc for information on how to roll out the above changes**
