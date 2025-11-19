@@ -4,7 +4,7 @@ Up to 8 clusters supported within site network. IP address ranges per cluster ar
 - First Cluster: 10.10.0.1 - 10.10.31.254
 - Second Cluster: 10.10.32.1 - 10.10.63.254
 
-The Controller node requires an IP on the Domain Network. This can be anything in the 10.178.0.0/16 range.
+The Controller node requires an IP on the Domain Network. This can be anything in the 10.178.0.0/19 range. The range 10.178.31.1 - 10.178.31.254 is reserved for network booting.
 
 1. Generate cluster & controller configuration (TO DO: Probs could auto-step through Domain Network & Cluster Network assignment to reduce chance for input issues?)
     - This requires the following information:
