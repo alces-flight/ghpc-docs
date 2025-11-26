@@ -1,8 +1,17 @@
 # Create a Cluster
 
-Up to 8 clusters supported within site network. IP address ranges per cluster are in the 10.10.0.0/19 range, moving onto the next for each cluster, e.g.:
-- First Cluster: 10.10.0.1 - 10.10.31.254
-- Second Cluster: 10.10.32.1 - 10.10.63.254
+Up to 8 clusters supported within site network. IP address ranges per cluster are in the 10.10.0.0/19 range, moving onto the next for each cluster:
+
+| Cluster Number | IP Range | Recommended Controller Admin IP | Recommended Controller Primary IP |
+| --- | --- | --- | --- |
+| 1 | 10.10.0.1 - 10.10.31.254 | 10.178.1.1 | 10.10.0.1 |
+| 2 | 10.10.32.1 - 10.10.63.254 | 10.178.2.1 | 10.10.32.1 |
+| 3 | 10.10.64.1 - 10.10.95.254 | 10.178.3.1 | 10.10.64.1 |
+| 4 | 10.10.96.1 - 10.10.127.254 | 10.178.4.1 | 10.10.96.1 |
+| 5 | 10.10.128.1 - 10.10.159.254 | 10.178.5.1 | 10.10.128.1 |
+| 6 | 10.10.160.1 - 10.10.191.254 | 10.178.6.1 | 10.10.128.1 |
+| 7 | 10.10.192.1 - 10.10.223.254 | 10.178.7.1 | 10.10.128.1 |
+| 8 | 10.10.224.1 - 10.10.254.254 | 10.178.8.1 | 10.10.128.1 |
 
 The Controller node requires an IP on the Domain Network. This can be anything in the 10.178.0.0/19 range. The range 10.178.31.1 - 10.178.31.254 is reserved for network booting.
 
