@@ -86,7 +86,7 @@
   "code_block": {
     "margin": 4,
     "background_color": "#363636",
-    "theme": "github"
+    "theme": "github-dark"
   },
   "table": {},
   "definition_list": {},
