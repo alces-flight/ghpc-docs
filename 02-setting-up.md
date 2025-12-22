@@ -1,6 +1,6 @@
 # Setting Up
 
-This guide describes how To setup your Director to ensure all services are using the correct domain information (including a fresh install of IPA).
+This guide describes how to setup your Director to ensure all services are using the correct domain information (including a fresh install of IPA).
 
 1. Configure site information on `director`
     1. Edit `/root/personality/setup.sh` and set the name of your site and domain alongside your new root and IPA passwords
