@@ -34,7 +34,7 @@ The Controller node requires an IP on the Domain Network. This can be anything i
         CONTROLLER_BOOT_MAC=AA:BB:CC:DD:EE:FF
 
         cd /root/personality/
-        bash new_cluster.sh $CLUSTERNAME $CONTROLLER_ADMIN_IP $CONTROLLER_ADMIN_INTERFACE $CONTROLLER_PRIMARY_IP $CONTROLLER_PRIMARY_INTERFACE $CONTROLLER_BOOT_MAC
+        bash new-cluster.sh $CLUSTERNAME $CONTROLLER_ADMIN_IP $CONTROLLER_ADMIN_INTERFACE $CONTROLLER_PRIMARY_IP $CONTROLLER_PRIMARY_INTERFACE $CONTROLLER_BOOT_MAC
         ```
 2. Generate NFS boot environment and configuration for login node
     - This requires the following information:
