@@ -27,7 +27,7 @@ The Controller node requires an IP on the Domain Network. This can be anything i
     - Configuring cluster and controller like so
         ```bash
         CLUSTERNAME=cluster1
-        CONTROLLER_ADMIN_IP=10.178.2.1
+        CONTROLLER_ADMIN_IP=10.178.1.1
         CONTROLLER_ADMIN_INTERFACE=enp1s0
         CONTROLLER_PRIMARY_IP=10.10.0.1
         CONTROLLER_PRIMARY_INTERFACE=enp2s0
