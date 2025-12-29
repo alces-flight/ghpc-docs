@@ -43,7 +43,7 @@ The Controller node requires an IP on the Domain Network. This can be anything i
         - `LOGIN_BOOT_MAC`: The MAC address of the interface that the login node will boot off of
         - `LOGIN_PRIMARY_IP`: The IP address for the login node to use on the cluster subnet (something in the 10.10.0.0/19 ranges mentioned at beginning of this doc) of the GHPC network
         - `LOGIN_PRIMARY_INTERFACE`: The interface name of the login node which will be assigned the primary IP above
-        - `EXTERNAL_INTERFACE`: The interface name of the login node which is connected to the External network
+        - `LOGIN_EXTERNAL_INTERFACE`: The interface name of the login node which is connected to the External network
     - Generating login node configuration like so
         ```bash
         CLUSTERNAME=cluster1
@@ -54,7 +54,7 @@ The Controller node requires an IP on the Domain Network. This can be anything i
         EXTERNAL_INTERFACE=enp2s0
 
         cd /root/personality/
-        bash add-node.sh $LOGIN_NAME $CLUSTERNAME $LOGIN_BOOT_MAC $LOGIN_PRIMARY_IP $LOGIN_PRIMARY_INTERFACE
+        EXTERNAL_INTERFACE=${LOGIN_EXTERNAL_INTERFACE} bash add-node.sh $LOGIN_NAME $CLUSTERNAME $LOGIN_BOOT_MAC $LOGIN_PRIMARY_IP $LOGIN_PRIMARY_INTERFACE
         ```
 3. Generate NFS boot environment and configuration for compute node (repeat this for all compute nodes being added)
     - This requires the following information:
