@@ -40,7 +40,7 @@ A cluster admin user is a privileged user who can utilise sudo to manage a clust
 - Switch to the user and setup their Flight SSH key
     ```bash
     su - newadmin1
-    flight
+    flight start
     ```
 
 The user can now access any nodes of all types (`controller`, `login` and `compute`) of the allowed clusters. The first time they login successfully they will be prompted to set a new password.
