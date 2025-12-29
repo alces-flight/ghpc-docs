@@ -23,7 +23,7 @@ The Controller node requires an IP on the Domain Network. This can be anything i
         - `CONTROLLER_PRIMARY_IP`: The IP address for the controller to use on the cluster subnet (something in the 10.10.0.0/19 ranges mentioned at beginning of this doc) of the GHPC network
         - `CONTROLLER_PRIMARY_INTERFACE`: The interface name of the controller which will be assigned the primary IP above
         - `CONTROLLER_BOOT_MAC`: The MAC address of the interface that the controller will boot off of
-    - _Note: if using a VM for controller, jump to step 4 for VM creation reference and see **Identifying Nodes** document for getting MAC address and interface name_
+    - _Note: if using a VM for controller, refer to step 4 for VM creation reference and see **Identifying Nodes** document for getting MAC address and interface name_
     - Configuring cluster and controller like so
         ```bash
         CLUSTERNAME=cluster1
