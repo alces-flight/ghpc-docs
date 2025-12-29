@@ -9,9 +9,9 @@ A regular user is a non-root user who can access a cluster as themselves and run
     ```bash
     ipa user-add newuser1 --first New --last User --random --noprivate
     ```
-- Add the user to the relevant cluster group(s). Replace `mycluster` with the cluster name.
+- Add the user to the relevant cluster group(s). Replace `cluster1` with the cluster name.
     ```bash
-    ipa group-add-member myclusterusers --users newuser1
+    ipa group-add-member cluster1users --users newuser1
     ```
 - Switch to the user and setup their Flight SSH key
     ```bash
@@ -32,10 +32,10 @@ A cluster admin user is a privileged user who can utilise sudo to manage a clust
     ```bash
     ipa user-add newadmin1 --first New --last Admin --random --noprivate
     ```
-- Add the user to the relevant cluster group(s). Replace `mycluster` with the cluster name.
+- Add the user to the relevant cluster group(s). Replace `cluster1` with the cluster name.
     ```bash
-    ipa group-add-member myclusterusers --users newadmin1
-    ipa group-add-member myclusteradmins --users newadmin1
+    ipa group-add-member cluster1users --users newadmin1
+    ipa group-add-member cluster1admins --users newadmin1
     ```
 - Switch to the user and setup their Flight SSH key
     ```bash
