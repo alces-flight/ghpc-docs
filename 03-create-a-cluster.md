@@ -51,7 +51,7 @@ The Controller node requires an IP on the Domain Network. This can be anything i
         LOGIN_BOOT_MAC=AA:BB:CC:DD:EE:FF
         LOGIN_PRIMARY_IP=10.10.4.1
         LOGIN_PRIMARY_INTERFACE=enp1s0
-        EXTERNAL_INTERFACE=enp2s0
+        LOGIN_EXTERNAL_INTERFACE=enp2s0
 
         cd /root/personality/
         EXTERNAL_INTERFACE=${LOGIN_EXTERNAL_INTERFACE} bash add-node.sh $LOGIN_NAME $CLUSTERNAME $LOGIN_BOOT_MAC $LOGIN_PRIMARY_IP $LOGIN_PRIMARY_INTERFACE
